@@ -1,0 +1,26 @@
+#addbag{
+  background-color:#90ee90;
+  padding: 3px 15px;
+  border-radius: 10px;
+  border: none;
+}
+#wishlist{
+  border-radius: 7px;
+  padding: 5px 35px;
+  text-transform: uppercase
+}
+#sales{
+  background-color:#90ee90;
+  border-radius: 10px;
+  border: none;
+  padding: 3px 15px;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+h1{
+  text-align: center;
+}
