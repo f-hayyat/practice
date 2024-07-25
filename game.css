@@ -1,0 +1,25 @@
+body{
+  text-align: center;
+}
+button{
+  padding: 7px 20px;
+  background-color: #4caf4f;
+  border-radius: 7px;
+  color: white;
+  font-size: 20px;
+}
+span{
+  margin: 10px 40px;
+}
+#score-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+p{
+  font-size: 20px;
+}
+#reset-btn{
+  background-color: red;
+}
