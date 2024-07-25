@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nested if else</title>
+  </head>
+  <body>
+    <label for="viewers">Number of Viewers</label>
+    <input
+      type="number"
+      id="viewers"
+      name="viewers"
+      placeholder="Enter number of viewes"
+      min="0"
+      required
+    />
+    <button onclick="showViewers()">Submit</button>
+    <h3 id="result"></h3>
+
+    <script>
+      function showViewers() {
+        let viewersCount = document.querySelector("#viewers").value;
+        let todayDate = new Date();
+        let today = todayDate.getDay();
+
+        if (today === 0) {
+          today = "Sunday";
+        } else if (today === 1) {
+          today = "Monday";
+        } else if (today === 2) {
+          today = "Tuesday";
+        } else if (today === 3) {
+          today = "Wednesday";
+        } else if (today === 4) {
+          today = "Thursday";
+        } else if (today === 5) {
+          today = "Friday";
+        } else if (today === 6) {
+          today = "Saturday";
+        }
+        console.log(today);
+
+        if (viewersCount < 13) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Today is ticket is free.`;
+        } else if (viewersCount >= 13 && viewersCount <= 60) {
+          if (today == "Saturday" || today == "Sunday") {
+            document.getElementById(
+              "result"
+            ).innerHTML = `Today's ticket price is Rs:  500.`;
+          } else {
+            document.getElementById(
+              "result"
+            ).innerHTML = `Today's ticket price is Rs:  300.`;
+          }
+        } else {document.getElementById(
+              "result"
+            ).innerHTML = `Today's ticket price is Rs:  250.`;
+      }}
+    </script>
+  </body>
+</html>
